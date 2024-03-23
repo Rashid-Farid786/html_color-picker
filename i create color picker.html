@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>color picher</title>
+<meta charset="utf-8"/>
+<mata name="viewport" content="width=devbice-width, initial-scale=1.0"/>
+<style>
+	*{overflow:hidden;}
+#box{text-decoration:upper-alpha; text-align:center; font-size:40px; line-height:200px; background:cyan; color:white; border:;}
+#box1{border-radius:50%; border:5px solid cyan; width:200px; height:200px;}
+</style>
+</head>
+<body onload="">
+<h1 id="h"></h1>
+<form>
+<div id="box"></div>
+<center><input type="color" id="color" value="#303001">
+<input type="button" id="button" autofocus value="preview" onclick="abc()">
+<input type="reset" onclick="ab()" value="REFRESH">
+<div id="box1"></div></center>
+</form>
+<script>
+function ab(){
+document.getElementById("box").innerHTML="";
+document.getElementById("box").style.background="";
+document.getElementById("box1").style.background="";
+}
+function abc(){
+var a=document.getElementById("color").value;
+document.getElementById("box").style.background=a;
+var r=document.getElementById("box").style.background;
+document.getElementById("box").innerHTML=a+"<br/>"+r;
+document.getElementById("box1").style.background=a;
+document.getElementById("color").value=a;
+var z=document.getElementById("color").valueOf(a);
+}
+</script>
+</body>
+</html>
